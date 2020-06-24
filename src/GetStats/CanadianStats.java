@@ -51,7 +51,7 @@ public class CanadianStats {
     } // getStats Method
 
     // This method gets the data from the API
-    static String stats(final String data) {
+    public static String stats(final String data) {
 
         try {
             String information;
@@ -207,10 +207,11 @@ class PerformTask implements EventListener {
         deaths = CanadianStats.deaths(deaths);
         recovered = CanadianStats.recovered(recovered);
         total = CanadianStats.total(total);
-
+        String a = "";
+        a = CanadianStats.stats(a);
         LoadingFrame.frameLoading.dispose(); // Disposing the loading screen
 
-        new StatsFrame(dailyCase, dailyDeath, deaths, recovered, total); // Passing the data to the stats frame and calling it to run
+        new StatsFrame(dailyCase, dailyDeath, deaths, recovered, total, a); // Passing the data to the stats frame and calling it to run
 
     } // onEvent Method
 

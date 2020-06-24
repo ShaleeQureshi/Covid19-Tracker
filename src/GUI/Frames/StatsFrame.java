@@ -31,7 +31,7 @@ public class StatsFrame implements ActionListener {
     private final JMenuItem[] items;
 
     // Constructor
-    public StatsFrame(String dailyCases, String dailyDeaths, String deaths, String recovered, String total) {
+    public StatsFrame(String dailyCases, String dailyDeaths, String deaths, String recovered, String total, String a) {
 
         // JFrame
         frameStats = new JFrame();
@@ -80,7 +80,7 @@ public class StatsFrame implements ActionListener {
 
         lblTotalActive.setBounds(50, 120, 300, 30);
         frameStats.add(lblTotalActive);
-
+        System.out.println(a);
         frameStats.setVisible(true);
 
     } // Constructor
